@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Учебный интернет-магазин: популярные товары, каталог, оформление заявки и контакты.">
+  <meta name="description" content="Учебный интернет-магазин: популярные товары, преимущества, контакты.">
   <title>ShopProject — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
@@ -16,10 +16,9 @@
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#popular">Популярные товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#advantages">Преимущества</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -34,7 +33,7 @@
         В дальнейшем на её основе будет разработан многостраничный
         сайт интернет-магазина или каталога услуг.
       </p>
-      <a class="button" href="catalog.html">Перейти к товарам</a>
+      <a class="button" href="#popular">Перейти к товарам</a>
     </section>
 
     <section class="section" id="advantages">
@@ -57,7 +56,6 @@
           <h3 class="product-card__title">Товар 1</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 1000 руб.</p>
-          <a class="product-card__link" href="product.html">Подробнее</a>
           <button class="button product-card__button" type="button" data-product="Товар 1">
             Заказать
           </button>
@@ -67,7 +65,6 @@
           <h3 class="product-card__title">Товар 2</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 1500 руб.</p>
-          <a class="product-card__link" href="product.html">Подробнее</a>
           <button class="button product-card__button" type="button" data-product="Товар 2">
             Заказать
           </button>
@@ -77,7 +74,6 @@
           <h3 class="product-card__title">Товар 3</h3>
           <p class="product-card__description">Краткое описание учебного товара.</p>
           <p class="product-card__price">Цена: 2000 руб.</p>
-          <a class="product-card__link" href="product.html">Подробнее</a>
           <button class="button product-card__button" type="button" data-product="Товар 3">
             Заказать
           </button>
