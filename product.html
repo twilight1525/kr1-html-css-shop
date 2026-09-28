@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Карточка товара — характеристики, цена, оформление заявки.">
+  <title>Товар — ShopProject</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="catalog.html" class="breadcrumbs__link">Каталог</a></li>
+        <li class="breadcrumbs__item breadcrumbs__item--current">Товар 1</li>
+      </ol>
+    </nav>
+
+    <article class="product-detail">
+
+      <div class="product-detail__media">
+        <div class="product-detail__image-placeholder">Изображение товара</div>
+      </div>
+
+      <div class="product-detail__info">
+        <h1 class="product-detail__title">Товар 1</h1>
+        <p class="product-detail__description">
+          Это учебный товар для демонстрации структуры карточки товара
+          в многостраничном проекте. Описание товара, его характеристики
+          и цена будут отображаться на этой странице.
+        </p>
+
+        <p class="product-detail__price">Цена: 1000 руб.</p>
+
+        <div class="product-detail__actions">
+          <button class="button product-detail__button" type="button" data-product="Товар 1">
+            Оформить заявку
+          </button>
+          <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
+        </div>
+      </div>
+    </article>
+
+    <section class="section">
+      <h2 class="section__title">Характеристики товара</h2>
+
+      <table class="specs-table">
+        <caption class="specs-table__caption">Технические характеристики Товара 1</caption>
+        <thead class="specs-table__head">
+          <tr>
+            <th class="specs-table__th">Параметр</th>
+            <th class="specs-table__th">Значение</th>
+          </tr>
+        </thead>
+        <tbody class="specs-table__body">
+          <tr>
+            <td class="specs-table__td">Категория</td>
+            <td class="specs-table__td">Электроника</td>
+          </tr>
+          <tr>
+            <td class="specs-table__td">Материал</td>
+            <td class="specs-table__td">Пластик / металл</td>
+          </tr>
+          <tr>
+            <td class="specs-table__td">Вес</td>
+            <td class="specs-table__td">350 г</td>
+          </tr>
+          <tr>
+            <td class="specs-table__td">Гарантия</td>
+            <td class="specs-table__td">12 месяцев</td>
+          </tr>
+          <tr>
+            <td class="specs-table__td">Цена</td>
+            <td class="specs-table__td">1000 руб.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+      <h2 id="order-dialog-title">Оформление заявки</h2>
+
+      <form class="order-form" id="order-form" action="#" method="post" novalidate>
+        <input id="selected-product" name="selected-product" type="hidden">
+
+        <div class="form-field">
+          <label for="order-name">Имя</label>
+          <input id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+        </div>
+
+        <div class="form-field">
+          <label for="order-email">E-mail</label>
+          <input id="order-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+        </div>
+
+        <div class="form-field">
+          <label for="order-phone">Телефон</label>
+          <input id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+          <small>Формат: +7 (900) 000-00-00</small>
+        </div>
+
+        <div class="form-field">
+          <label for="order-date">Дата связи</label>
+          <input id="order-date" name="date" type="date">
+        </div>
+
+        <div class="form-field">
+          <label for="order-topic">Тема заявки</label>
+          <select id="order-topic" name="topic" required>
+            <option value="">Выберите тему</option>
+            <option value="product">Заказ товара</option>
+            <option value="consultation">Консультация</option>
+            <option value="delivery">Доставка</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="order-comment">Комментарий</label>
+          <textarea id="order-comment" name="comment" rows="4" placeholder="Укажите дополнительную информацию"></textarea>
+        </div>
+
+        <div class="form-field form-field--checkbox">
+          <label>
+            <input id="order-agreement" name="agreement" type="checkbox" required>
+            Я согласен на обработку данных
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="close-order-dialog">Закрыть</button>
+          <button type="submit">Отправить заявку</button>
+        </div>
+      </form>
+    </dialog>
+
+    <p class="success-message" id="success-message" hidden>
+      Форма успешно отправлена!
+    </p>
+
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p class="site-footer__text">Дисциплина: фронтенд и бэкенд разработка</p>
+  </footer>
+
+</body>
+</html>
