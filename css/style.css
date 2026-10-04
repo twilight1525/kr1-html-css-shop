@@ -394,3 +394,33 @@ a:focus-visible {
 .scroll-top:hover {
   background-color: var(--color-primary-dark);
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.breadcrumbs {
+  max-width: var(--container-width);
+  margin: var(--space-lg) auto var(--space-md);
+  padding: 0 var(--space-lg);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
+}
+
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
+}
