@@ -76,6 +76,11 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.button--primary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 .button--secondary {
   color: var(--color-primary);
   background-color: transparent;
@@ -87,7 +92,7 @@ a:focus-visible {
   background-color: var(--color-primary);
 }
 
-.button:focus-visible {
+.button--secondary:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
@@ -234,6 +239,19 @@ a:focus-visible {
 
 .product-card--featured {
   border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 87, 184, 0.15);
+}
+
+.product-card--discount {
+  border-color: var(--color-danger);
+}
+
+.product-card--discount .product-card__price {
+  color: var(--color-danger);
+}
+
+.product-card--new {
+  border-color: var(--color-success);
 }
 
 .product-card__title {
