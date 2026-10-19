@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Каталог товаров учебного интернет-магазина ShopProject.">
-  <title>Каталог товаров – ShopProject</title>
+  <meta name="description" content="Каталог кукол Ever After High.">
+  <title>Каталог – ShopProject</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -18,89 +18,118 @@
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#faq">FAQ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <span class="breadcrumbs__current">Каталог</span>
     </nav>
 
-    <section class="section">
-      <h1 class="section__title">Каталог товаров</h1>
-      <p class="section__text">На этой странице представлен учебный каталог товаров.</p>
-    </section>
-
     <section class="catalog-layout">
-
+      
       <aside class="catalog-filters">
         <h2 class="catalog-filters__title">Фильтры</h2>
-
         <form class="filters-form" action="#" method="get">
           <fieldset class="filters-form__group">
-            <legend class="filters-form__legend">Категория</legend>
-            <label class="filters-form__label"><input type="checkbox" name="category" value="all"> Все товары</label>
-            <label class="filters-form__label"><input type="checkbox" name="category" value="popular"> Популярные</label>
-            <label class="filters-form__label"><input type="checkbox" name="category" value="new"> Новинки</label>
+            <legend class="filters-form__legend">Коллекция</legend>
+            <label class="filters-form__label"><input type="checkbox"> Все</label>
+            <label class="filters-form__label"><input type="checkbox"> Royals</label>
+            <label class="filters-form__label"><input type="checkbox"> Rebels</label>
           </fieldset>
-
           <fieldset class="filters-form__group">
             <legend class="filters-form__legend">Цена</legend>
             <label class="filters-form__label" for="price-from">От</label>
-            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <input id="price-from" type="number" min="0">
             <label class="filters-form__label" for="price-to">До</label>
-            <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+            <input id="price-to" type="number" min="0">
           </fieldset>
-
           <button class="button button--primary" type="submit">Применить</button>
         </form>
       </aside>
 
       <section class="catalog-products">
-        <h2 class="section__title">Список товаров</h2>
-
+        <h2 class="section__title">Все куклы</h2>
         <div class="products-grid">
-
-          <article class="product-card product-card--featured">
-            <h3 class="product-card__title">Товар 1</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--secondary" href="index.html#popular">Подробнее</a>
+          
+          <article class="product-card">
+            <img src="images/cupid.jpg" alt="Кьюпид" class="product-card__image">
+            <h3 class="product-card__title">Кьюпид</h3>
+            <p class="product-card__description">Краткое описание.</p>
+            <p class="product-card__price">Цена: 10 000 руб.</p>
+            <a class="button button--secondary" href="product.html">Подробнее</a>
           </article>
 
-          <article class="product-card product-card--discount">
-            <h3 class="product-card__title">Товар 2</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1500 руб.</p>
-            <a class="button button--secondary" href="index.html#popular">Подробнее</a>
+          <article class="product-card">
+            <img src="images/poppy.jpg" alt="Поппи" class="product-card__image">
+            <h3 class="product-card__title">Поппи и Холли</h3>
+            <p class="product-card__description">Краткое описание.</p>
+            <p class="product-card__price">Цена: 20 000 руб.</p>
+            <a class="button button--secondary" href="product.html">Подробнее</a>
           </article>
 
-          <article class="product-card product-card--new">
-            <h3 class="product-card__title">Товар 3</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 2000 руб.</p>
-            <a class="button button--secondary" href="index.html#popular">Подробнее</a>
+          <article class="product-card">
+            <img src="images/ell.jpg" alt="Элл Вайт" class="product-card__image">
+            <h3 class="product-card__title">Элл Вайт</h3>
+            <p class="product-card__description">Краткое описание.</p>
+            <p class="product-card__price">Цена: 8 000 руб.</p>
+            <a class="button button--secondary" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img src="images/reiven.jpeg" alt="Рейвен" class="product-card__image">
+            <h3 class="product-card__title">Рейвен Квин</h3>
+            <p class="product-card__description">Краткое описание.</p>
+            <p class="product-card__price">Цена: 12 000 руб.</p>
+            <a class="button button--secondary" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img src="images/hat.jpg.webp" alt="Мэдлин" class="product-card__image">
+            <h3 class="product-card__title">Мэдлин Хэттер</h3>
+            <p class="product-card__description">Краткое описание.</p>
+            <p class="product-card__price">Цена: 9 000 руб.</p>
+            <a class="button button--secondary" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img src="images/large_Duchess_Swan_0.jpg" alt="Герцогиня" class="product-card__image">
+            <h3 class="product-card__title">Дачес Свон</h3>
+            <p class="product-card__description">Краткое описание.</p>
+            <p class="product-card__price">Цена: 15 000 руб.</p>
+            <a class="button button--secondary" href="duchess.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img src="images/100022958425b0.jpg.webp" alt="Кукла 7" class="product-card__image">
+            <h3 class="product-card__title">Набор кукол</h3>
+            <p class="product-card__description">Краткое описание.</p>
+            <p class="product-card__price">Цена: 11 000 руб.</p>
+            <a class="button button--secondary" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img src="images/large_Braer_Byuti_0.jpg" alt="Браер" class="product-card__image">
+            <h3 class="product-card__title">Браер Бьюти</h3>
+            <p class="product-card__description">Краткое описание.</p>
+            <p class="product-card__price">Цена: 14 000 руб.</p>
+            <a class="button button--secondary" href="product.html">Подробнее</a>
           </article>
 
         </div>
       </section>
-
     </section>
-
   </main>
 
   <footer class="site-footer" id="contacts">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: фронтенд и бэкенд разработка</p>
+    <p class="site-footer__text">&copy; 2026 Учебный проект.</p>
   </footer>
-
+  
   <button class="scroll-top" id="scroll-top" type="button" aria-label="Наверх">↑</button>
 </body>
 </html>
