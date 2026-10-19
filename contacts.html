@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Контактная информация учебного интернет-магазина ShopProject.">
+  <meta name="description" content="Контакты ShopProject.">
   <title>Контакты – ShopProject</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
 
   <header class="site-header">
     <div class="site-header__inner">
@@ -18,16 +18,14 @@
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#contacts">Обратная связь</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#faq">FAQ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-
+  <main style="flex: 1;">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <span class="breadcrumbs__current">Контакты</span>
@@ -35,28 +33,19 @@
 
     <section class="section">
       <h1 class="section__title">Контакты</h1>
-      <p class="section__text">Здесь размещается контактная информация учебного интернет-магазина.</p>
-      <ul class="advantages-list">
-        <li class="advantages-list__item">Телефон: +7 (900) 000-00-00</li>
-        <li class="advantages-list__item">E-mail: info@example.com</li>
-        <li class="advantages-list__item">Адрес: г. Москва, учебный проект</li>
-      </ul>
+      <div style="background-color: var(--color-surface); padding: 24px; border-radius: var(--radius-md); max-width: 600px;">
+        <p style="margin-bottom: 16px;"><strong>Телефон:</strong> +7 (900) 000-00-00</p>
+        <p style="margin-bottom: 16px;"><strong>Email:</strong> info@example.com</p>
+        <p style="margin-bottom: 16px;"><strong>Адрес:</strong> г. Москва, ул. Котиков, д. 15</p>
+        <p><strong>Режим работы:</strong> Пн-Пт с 10:00 до 19:00</p>
+      </div>
     </section>
-
-    <section class="section" id="feedback">
-      <h2 class="section__title">Обратная связь</h2>
-      <p class="section__text">Для отправки заявки используйте форму в модальном окне на главной странице.</p>
-      <a class="button button--primary" href="index.html#contacts">Перейти к форме</a>
-    </section>
-
   </main>
 
   <footer class="site-footer" id="contacts">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: фронтенд и бэкенд разработка</p>
+    <p class="site-footer__text">&copy; 2026 Учебный проект.</p>
   </footer>
 
   <button class="scroll-top" id="scroll-top" type="button" aria-label="Наверх">↑</button>
-
 </body>
 </html>

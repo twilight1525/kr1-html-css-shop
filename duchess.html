@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Страница куклы Дачес Свон ShopProject.">
+  <title>Дачес Свон – ShopProject</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="flex: 1;">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+      <span class="breadcrumbs__current">Дачес Свон</span>
+    </nav>
+
+    <section class="section" style="display: flex; gap: 32px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 300px;">
+        <img src="images/large_Duchess_Swan_0.jpg" alt="Дачес Свон" style="width: 100%; border-radius: var(--radius-lg);">
+      </div>
+      <div style="flex: 1; min-width: 300px;">
+        <h1 class="section__title">Кукла Дачес Свон</h1>
+        <p class="section__text">Элегантная и грациозная кукла из коллекции Ever After High. Прекрасный выбор для ценителей стиля.</p>
+        <p style="font-size: 28px; font-weight: bold; color: var(--color-primary);">Цена: 15 000 руб.</p>
+        
+        <table class="specs-table" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <thead>
+            <tr style="background-color: var(--color-surface); text-align: left;">
+              <th style="padding: 10px; border: 1px solid var(--color-border);">Характеристика</th>
+              <th style="padding: 10px; border: 1px solid var(--color-border);">Значение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding: 10px; border: 1px solid var(--color-border);">Коллекция</td><td style="padding: 10px; border: 1px solid var(--color-border);">Ever After High</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid var(--color-border);">Рост</td><td style="padding: 10px; border: 1px solid var(--color-border);">27 см</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid var(--color-border);">Материал</td><td style="padding: 10px; border: 1px solid var(--color-border);">Пластик, текстиль</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid var(--color-border);">Год выпуска</td><td style="padding: 10px; border: 1px solid var(--color-border);">2014</td></tr>
+          </tbody>
+        </table>
+
+        <button class="button button--primary" type="button" data-product="Дачес Свон">Заказать</button>
+        <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
+      </div>
+    </section>
+
+    <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+      <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+      <form class="order-form" id="order-form" action="#" method="post" novalidate>
+        <input id="selected-product" name="selected-product" type="hidden">
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-name">Имя</label>
+          <input class="order-form__input" id="order-name" name="name" type="text" required>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="order-email">E-mail</label>
+          <input class="order-form__input" id="order-email" name="email" type="email" required>
+        </div>
+        <div class="order-form__actions">
+          <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+          <button class="button button--primary" type="submit">Отправить</button>
+        </div>
+      </form>
+    </dialog>
+    <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <p class="site-footer__text">&copy; 2026 Учебный проект.</p>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" type="button" aria-label="Наверх">↑</button>
+</body>
+</html>
