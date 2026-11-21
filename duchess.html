@@ -8,56 +8,52 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+<body>
 
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <a class="site-header__logo" href="index.html">🎀 ShopProject</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="accessories.html">Аксессуары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="about.html">О нас</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Товары</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html#faq">FAQ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main style="flex: 1;">
+  <main>
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
       <a class="breadcrumbs__link" href="index.html">Главная</a>
       <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
       <span class="breadcrumbs__current">Дачес Свон</span>
     </nav>
 
-    <section class="section" style="display: flex; gap: 32px; flex-wrap: wrap;">
-      <div style="flex: 1; min-width: 300px;">
-        <img src="images/large_Duchess_Swan_0.jpg" alt="Дачес Свон" style="width: 100%; border-radius: var(--radius-lg);">
+    <section class="product-detail">
+      <div class="product-detail__media">
+        <img src="images/large_Duchess_Swan_0.jpg" alt="Дачес Свон" class="product-detail__image">
       </div>
-      <div style="flex: 1; min-width: 300px;">
+      <div class="product-detail__info">
         <h1 class="section__title">Кукла Дачес Свон</h1>
         <p class="section__text">Элегантная и грациозная кукла из коллекции Ever After High. Прекрасный выбор для ценителей стиля.</p>
-        <p style="font-size: 28px; font-weight: bold; color: var(--color-primary);">Цена: 15 000 руб.</p>
-        
-        <table class="specs-table" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <thead>
-            <tr style="background-color: var(--color-surface); text-align: left;">
-              <th style="padding: 10px; border: 1px solid var(--color-border);">Характеристика</th>
-              <th style="padding: 10px; border: 1px solid var(--color-border);">Значение</th>
-            </tr>
-          </thead>
+        <p class="product-detail__price">15 000 руб.</p>
+        <table class="specs-table">
+          <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
           <tbody>
-            <tr><td style="padding: 10px; border: 1px solid var(--color-border);">Коллекция</td><td style="padding: 10px; border: 1px solid var(--color-border);">Ever After High</td></tr>
-            <tr><td style="padding: 10px; border: 1px solid var(--color-border);">Рост</td><td style="padding: 10px; border: 1px solid var(--color-border);">27 см</td></tr>
-            <tr><td style="padding: 10px; border: 1px solid var(--color-border);">Материал</td><td style="padding: 10px; border: 1px solid var(--color-border);">Пластик, текстиль</td></tr>
-            <tr><td style="padding: 10px; border: 1px solid var(--color-border);">Год выпуска</td><td style="padding: 10px; border: 1px solid var(--color-border);">2014</td></tr>
+            <tr><td>Коллекция</td><td>Ever After High</td></tr>
+            <tr><td>Рост</td><td>27 см</td></tr>
+            <tr><td>Материал</td><td>Пластик, текстиль</td></tr>
+            <tr><td>Год выпуска</td><td>2014</td></tr>
           </tbody>
         </table>
-
-        <button class="button button--primary" type="button" data-product="Дачес Свон">Заказать</button>
-        <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
+        <div class="product-detail__actions">
+          <button class="button button--primary" type="button" data-product="Дачес Свон">Заказать</button>
+          <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
+        </div>
       </div>
     </section>
 
@@ -82,8 +78,38 @@
     <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
   </main>
 
-  <footer class="site-footer" id="contacts">
-    <p class="site-footer__text">&copy; 2026 Учебный проект.</p>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__col">
+        <p class="site-footer__logo">🎀 ShopProject</p>
+        <p class="site-footer__text">Учебный проект. Магазин кукол Ever After High.</p>
+      </div>
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Навигация</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html">Главная</a></li>
+          <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-footer__link" href="accessories.html">Аксессуары</a></li>
+          <li><a class="site-footer__link" href="about.html">О нас</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Покупателям</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="delivery.html">Доставка и оплата</a></li>
+          <li><a class="site-footer__link" href="contacts.html">Контакты</a></li>
+          <li><a class="site-footer__link" href="index.html#faq">FAQ</a></li>
+          <li><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <p class="site-footer__heading">Контакты</p>
+        <p class="site-footer__text">+7 (900) 000-00-00</p>
+        <p class="site-footer__text">info@example.com</p>
+        <p class="site-footer__text">г. Москва, ул. Котиков, 15</p>
+      </div>
+    </div>
+    <p class="site-footer__bottom">&copy; 2026 ShopProject. Учебный проект.</p>
   </footer>
 
   <button class="scroll-top" id="scroll-top" type="button" aria-label="Наверх">↑</button>

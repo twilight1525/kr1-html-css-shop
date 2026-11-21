@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доставка – SweetDolls</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="glass-header py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-6 col-md-3">
+          <a class="navbar-brand fw-bold text-white fs-4" href="index.html" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5); display: inline-flex; align-items: center; gap: 10px;">
+            <img src="images/logo.png" alt="Логотип" style="height: 60px; width: 60px; object-fit: contain;">
+            SweetDolls
+          </a>
+        </div>
+        <div class="col-6 col-md-9 text-end d-flex align-items-center justify-content-end gap-2">
+          <a href="index.html" class="btn btn-glass d-none d-lg-inline-flex">Главная</a>
+          <a href="catalog.html" class="btn btn-glass d-none d-lg-inline-flex">Каталог</a>
+          <a href="accessories.html" class="btn btn-glass d-none d-lg-inline-flex">Аксессуары</a>
+          <a href="about.html" class="btn btn-glass d-none d-lg-inline-flex">О нас</a>
+          <a href="delivery.html" class="btn btn-glass active d-none d-lg-inline-flex">Доставка</a>
+          <a href="contacts.html" class="btn btn-glass d-none d-lg-inline-flex">Контакты</a>
+          <a href="#" class="btn btn-aero" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container py-5">
+      <h1 class="h2 text-aero-dark mb-4 text-center">Доставка и магазины</h1>
+
+      <div class="row g-4 mt-4">
+        <div class="col-12 col-lg-6">
+          <div class="glass-panel p-5 h-100">
+            <h3 class="h4 text-aero-dark mb-4">Магазин на Китай-городе</h3>
+            <p class="fs-5 text-aero-dark mb-2"><strong>Москва, ул. Варварка, д. 8</strong></p>
+            <div class="d-flex align-items-center mb-3">
+              <span class="badge bg-danger fs-6 me-2 py-2 px-3">М</span>
+              <span class="text-aero-dark"><strong>Китай-город</strong> (выход №7)</span>
+            </div>
+            <p class="text-aero-muted mb-4">Выход на улицу Варварка, повернуть налево и пройти 150 метров.</p>
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mt-auto">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3b9b0a866b4839944e5b74914d2bc3a9fc4705b1f36a2c4070352f4e517a0578&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="glass-panel p-5 h-100">
+            <h3 class="h4 text-aero-dark mb-4">Магазин на Киевской</h3>
+            <p class="fs-5 text-aero-dark mb-2"><strong>Москва, ул. Большая Дорогомиловская, д. 4</strong></p>
+            <div class="d-flex align-items-center mb-3">
+              <span class="badge bg-primary fs-6 me-2 py-2 px-3">М</span>
+              <span class="text-aero-dark"><strong>Киевская</strong> (выход №2)</span>
+            </div>
+            <p class="text-aero-muted mb-4">Выход к ТЦ «Европейский», далее прямо 300 метров по левой стороне.</p>
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mt-auto">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1d4b3b7a7e89156dbebd6e8c0d4e3214f0f0d1a6bb8cf6f44a8b5a1e4f6c9a1e&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="py-5">
+        <h2 class="text-center text-aero-dark mb-4 display-6">Условия доставки</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="glass-card h-100 p-4 text-center">
+              <span class="bubble-icon mb-3 d-inline-block"></span>
+              <h3 class="h5 text-aero-dark">По Москве</h3>
+              <p class="text-aero-muted small mb-0">Курьером — от 1 дня, 350 ₽. Бесплатно при заказе от 5 000 ₽.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="glass-card h-100 p-4 text-center">
+              <span class="bubble-icon mb-3 d-inline-block"></span>
+              <h3 class="h5 text-aero-dark">По России</h3>
+              <p class="text-aero-muted small mb-0">Почтой / СДЭК — от 3 до 7 дней, от 400 ₽.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="glass-card h-100 p-4 text-center">
+              <span class="bubble-icon mb-3 d-inline-block"></span>
+              <h3 class="h5 text-aero-dark">Самовывоз</h3>
+              <p class="text-aero-muted small mb-0">Бесплатно из любого нашего магазина.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="glass-card h-100 p-4 text-center">
+              <span class="bubble-icon mb-3 d-inline-block"></span>
+              <h3 class="h5 text-aero-dark">Подарочная упаковка</h3>
+              <p class="text-aero-muted small mb-0">Бесплатно по запросу.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="scroll-to-top" id="scrollToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </div>
+  </main>
+
+  <footer class="site-footer-pink pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-4">
+          <a class="navbar-brand fw-bold d-flex align-items-center gap-2 mb-3 footer-logo" href="index.html">
+            <img src="images/logo.png" alt="Логотип" style="height: 50px; width: 50px; object-fit: contain;">
+            SweetDolls
+          </a>
+          <p class="small opacity-75 mb-4">Куклы Ever After High. Аксессуары. Коллекции.</p>
+          <p class="small opacity-50">&copy; 2024 - 2026 Все права защищены.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="fw-bold mb-3 fs-6">Магазин</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2"><a href="catalog.html">Каталог</a></li>
+            <li class="mb-2"><a href="accessories.html">Аксессуары</a></li>
+            <li class="mb-2"><a href="about.html">О нас</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="fw-bold mb-3 fs-6">Помощь</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2"><a href="delivery.html">Доставка</a></li>
+            <li class="mb-2"><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 text-lg-end">
+          <h3 class="fw-bold mb-3">+7 (999) 123-45-67</h3>
+          <ul class="list-unstyled footer-links mb-4">
+            <li class="mb-2"><a href="mailto:info@sweetdolls.ru">info@sweetdolls.ru</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
