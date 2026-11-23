@@ -14,80 +14,98 @@
   <header class="glass-header py-3">
     <div class="container">
       <div class="row align-items-center">
+        
+        <!-- Логотип (слева) -->
         <div class="col-6 col-md-3">
           <a class="navbar-brand fw-bold text-white fs-4" href="index.html" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5); display: inline-flex; align-items: center; gap: 10px;">
             <img src="images/logo.png" alt="Логотип SweetDolls" style="height: 60px; width: 60px; object-fit: contain;">SweetDolls
           </a>
         </div>
+
+        <!-- Навигация и Меню -->
         <div class="col-6 col-md-9 text-end d-flex align-items-center justify-content-end gap-2">
-          <nav aria-label="Основная навигация" class="d-flex align-items-center gap-2">
-            <a href="index.html" class="btn btn-glass d-none d-lg-inline-flex">Главная</a>
-            <a href="catalog.html" class="btn btn-glass active d-none d-lg-inline-flex" aria-current="page">Каталог</a>
-            <a href="accessories.html" class="btn btn-glass d-none d-lg-inline-flex">Аксессуары</a>
-            <a href="about.html" class="btn btn-glass d-none d-lg-inline-flex">О нас</a>
-            <a href="contacts.html" class="btn btn-glass d-none d-lg-inline-flex">Контакты</a>
-            <a href="#" class="btn btn-aero" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
+          <nav aria-label="Основная навигация" class="d-none d-md-flex align-items-center gap-2">
+            <a href="index.html" class="btn btn-glass">Главная</a>
+            <a href="catalog.html" class="btn btn-glass active" aria-current="page">Каталог</a>
+            <a href="accessories.html" class="btn btn-glass">Аксессуары</a>
+            <a href="about.html" class="btn btn-glass">О нас</a>
+            <a href="contacts.html" class="btn btn-glass">Контакты</a>
+            <a href="#" class="btn btn-aero ms-2" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
           </nav>
+
+          <button class="btn btn-glass d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Открыть меню">
+            ☰ Меню
+          </button>
         </div>
+      </div>
+
+      <div class="collapse d-md-none mt-3" id="mobileMenu">
+        <nav class="d-flex flex-column gap-2 p-3 rounded-4" style="background: rgba(255,255,255,0.95); box-shadow: 0 10px 30px rgba(233, 30, 99, 0.2);" aria-label="Мобильная навигация">
+          <a href="index.html" class="btn btn-glass w-100">Главная</a>
+          <a href="catalog.html" class="btn btn-glass w-100 active">Каталог</a>
+          <a href="accessories.html" class="btn btn-glass w-100">Аксессуары</a>
+          <a href="about.html" class="btn btn-glass w-100">О нас</a>
+          <a href="contacts.html" class="btn btn-glass w-100">Контакты</a>
+          <a href="#" class="btn btn-aero w-100 mt-2" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
+        </nav>
       </div>
     </div>
   </header>
 
-  <!-- ИСПРАВЛЕНО: убран дубликат main -->
   <main id="main">
     <div class="container py-5">
       <h1 class="h2 text-aero-dark mb-4 text-center">Каталог кукол</h1>
       <p class="text-center text-aero-muted mb-5">Выбери свою любимую героиню Ever After High.</p>
 
       <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/cupid.jpg" alt="Кукла Кьюпид с крыльями и луком " class="card-img-custom">
+            <img src="images/cupid.jpg" alt="Кукла Кьюпид" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Кьюпид</h2>
             <p class="text-aero-muted">Кукла с крыльями и луком любви.</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 500 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/poppy.jpg" alt="Кукла Поппи О'Хара с короткими волосами" class="card-img-custom">
+            <img src="images/poppy.jpg" alt="Кукла Поппи О'Хара" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Поппи О'Хара</h2>
             <p class="text-aero-muted">Яркая кукла в стиле «Златовласка».</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 200 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/reiven.jpeg" alt="Кукла Рейвен Квин в фиолетовых оттенках " class="card-img-custom">
+            <img src="images/reiven.jpeg" alt="Кукла Рейвен Квин" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Рейвен Квин</h2>
             <p class="text-aero-muted">Дочь Злой Королевы в фиолетовом платье.</p>
             <p class="fw-bold fs-5 text-aero mt-auto">5 000 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/ell.jpg" alt="Кукла Элл Вайт с длинными золотыми волосами" class="card-img-custom">
+            <img src="images/ell.jpg" alt="Кукла Элл Вайт" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Элл Вайт</h2>
             <p class="text-aero-muted">Дочь Белоснежки в голубом платье.</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 800 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/hat.jpg.webp" alt="Кукла Мэдлин Хэттер с кудряшками и чайником" class="card-img-custom">
+            <img src="images/hat.jpg.webp" alt="Кукла Мэдлин Хэттер" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Мэдлин Хэттер</h2>
             <p class="text-aero-muted">Дочь Безумного Шляпника.</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 600 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/large_Duchess_Swan_0.jpg" alt="Кукла Дачес Свон на коньках в ледяном стиле" class="card-img-custom">
+            <img src="images/large_Duchess_Swan_0.jpg" alt="Кукла Дачес Свон" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Дачес Свон</h2>
             <p class="text-aero-muted">Дочь Королевы Лебедей.</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 300 ₽</p>
@@ -95,54 +113,54 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/5432.jpeg" alt="Кукла Лиззи Хартс в красно-черном платье" class="card-img-custom">
+            <img src="images/5432.jpeg" alt="Кукла Лиззи Хартс" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Лиззи Хартс</h2>
             <p class="text-aero-muted">Дочь красной королевы</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 500 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/6543.jpg" alt="Кукла Дарлинг Чарминг в доспехах из игры драконов" class="card-img-custom">
+            <img src="images/6543.jpg" alt="Кукла Дарлинг Чарминг" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Дарлинг Чарминг</h2>
             <p class="text-aero-muted">Дочь рыцаря и королевы</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 500 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/5555.jpg" alt="Кукла Джинджер Бредхаус со стопкой книг" class="card-img-custom">
+            <img src="images/5555.jpg" alt="Кукла Джинджер Бредхаус" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Джинджер Бредхаус</h2>
             <p class="text-aero-muted">Дочь пряничного человечка</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 500 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/9809.jpg" alt="Кукла Эшлин Элла с хрустальным туфлями и сумкой часами" class="card-img-custom">
+            <img src="images/9809.jpg" alt="Кукла Эшлин Элла" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Эшлин Элла</h2>
             <p class="text-aero-muted">Дочь Золушки.</p>
             <p class="fw-bold fs-5 text-aero mt-auto">4 500 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/768.jpg" alt="Кукла Поппи на льду с сумкой в виде снежинки" class="card-img-custom">
+            <img src="images/768.jpg" alt="Кукла Поппи на льду" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Поппи на льду</h2>
             <p class="text-aero-muted">Поппи на коньках, зимняя коллекция </p>
             <p class="fw-bold fs-5 text-aero mt-auto">6 700 ₽</p>
             <button class="btn btn-outline-aero rounded-pill mt-3 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-6 col-md-6 col-lg-4">
           <div class="glass-card h-100 p-4 d-flex flex-column">
-            <img src="images/000.jpg" alt="Кукла Эппл Уайт день коронации с книгой и ключом" class="card-img-custom">
+            <img src="images/000.jpg" alt="Кукла Эппл Уайт день коронации" class="card-img-custom">
             <h2 class="h5 text-aero-dark">Эппл Уайт день коронации</h2>
             <p class="text-aero-muted">День коронации дочь белоснежки</p>
             <p class="fw-bold fs-5 text-aero mt-auto">9 900 ₽</p>
@@ -157,8 +175,8 @@
   <footer class="site-footer-pink pt-5 pb-3">
     <div class="container">
       <div class="row g-4 mb-4 align-items-center">
-        <div class="col-12 col-lg-4">
-          <a class="navbar-brand fw-bold d-flex align-items-center gap-2 mb-2 footer-logo" href="index.html">
+        <div class="col-12 col-lg-4 text-center text-lg-start">
+          <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 mb-2 footer-logo" href="index.html">
             <img src="images/logo.png" alt="Логотип SweetDolls" style="height: 50px; width: 50px; object-fit: contain;">SweetDolls
           </a>
           <p class="small opacity-75 mb-2">Куклы Ever After High. Аксессуары. Коллекции.</p>
@@ -173,9 +191,11 @@
             <li><a href="about.html">О нас</a></li>
           </ul>
         </div>
-        <div class="col-12 col-lg-4 text-lg-end">
-          <a href="contacts.html#contact-section" class="footer-contact-btn">Связаться с нами <span aria-hidden="true">💌</span></a>
-          <div class="d-flex justify-content-lg-end align-items-center gap-3 mt-3">
+        <div class="col-12 col-lg-4 text-center text-lg-end">
+          <div class="d-flex justify-content-center justify-content-lg-end mb-3">
+            <a href="contacts.html#contact-section" class="footer-contact-btn">Связаться с нами <span aria-hidden="true">💌</span></a>
+          </div>
+          <div class="d-flex justify-content-center justify-content-lg-end align-items-center gap-3">
             <a href="#" class="footer-social-icon" aria-label="Наш ВКонтакте"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.785 18C6.935 18 3.708 14.163 3.543 3.67H6.505C6.595 10.144 9.554 12.856 12.058 13.503V3.67H15.01V9.64C17.438 9.372 19.988 6.787 20.864 3.67H23.787C22.768 7.574 20.205 10.159 18.261 11.338C20.205 12.352 23.104 15.078 24 18H20.785C20.031 15.384 18.086 13.191 15.01 12.856V18H12.785Z" fill="#fff"/></svg></a>
             <a href="#" class="footer-social-icon" aria-label="Наш Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.6914 3.20068L2.92578 10.5137C1.91992 10.9254 1.93555 11.4935 2.75391 11.7497L7.53125 13.2598L18.6289 6.26367C19.1504 5.94141 19.627 6.11328 19.2344 6.46875L10.207 14.6265H10.2031L10.207 14.6305L9.875 19.3691C10.3535 19.3691 10.5547 19.1562 10.8242 18.8965L12.9844 16.8418L17.7734 20.3711C18.668 20.8672 19.3047 20.6055 19.5273 19.5293L22.4141 4.15039C22.7227 2.9082 21.9492 2.3418 21.6914 3.20068Z" fill="#fff"/></svg></a>
             <a href="#" class="footer-social-icon" aria-label="Наш Max"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 18V6H7L12 12L17 6H20V18H17V10L12 16L7 10V18H4Z" fill="#fff"/></svg></a>
@@ -225,27 +245,17 @@
     <button class="manager-chat-btn" onclick="toggleChat()" aria-label="Открыть чат">💬<span class="chat-badge">1</span></button>
   </div>
 
-  <div class="scroll-to-top" id="scrollToTopBtn">
-    <svg onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="cursor: pointer;" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="button" aria-label="Прокрутить наверх">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  </div>
-
-  <!-- КНОПКА НАВЕРХ -->
-  <div class="scroll-to-top" id="scrollToTopBtn">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <div class="scroll-to-top" id="scrollToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <svg style="cursor: pointer;" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Чат
     function toggleChat() {
       document.getElementById('chatBox').classList.toggle('show');
     }
-    
-    // Кнопка наверх
     window.addEventListener('scroll', function() {
       const btn = document.getElementById('scrollToTopBtn');
       if (window.scrollY > 300) {
@@ -253,11 +263,6 @@
       } else {
         btn.classList.remove('show');
       }
-    });
-
-    // Обработчик клика (вешаем прямо на кнопку)
-    document.getElementById('scrollToTopBtn').addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>

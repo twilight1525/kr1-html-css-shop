@@ -506,42 +506,30 @@ main {
 .btn:focus-visible {
   box-shadow: 0 0 0 0.25rem rgba(216, 27, 96, 0.5) !important;
 }
-/* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ (Телефоны) ===== */
+/* ===== АДАПТИВНОСТЬ (ТЕЛЕФОНЫ) ===== */
 @media (max-width: 767px) {
+  /* Карточки в 2 столбика */
+  .row > .col-6.col-md-6.col-lg-4 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .card-img-custom { height: 180px !important; object-fit: contain; }
+  .glass-card h3, .glass-card h2 { font-size: 16px !important; }
+  .glass-card .text-aero-muted { font-size: 12px !important; }
+  .glass-card .fs-5 { font-size: 16px !important; }
+  .glass-card .btn { font-size: 12px !important; padding: 6px 12px !important; width: 100% !important; }
+
+  /* Центрируем футер на мобильных */
+  .site-footer-pink { text-align: center; }
+  .site-footer-pink .row { justify-content: center; }
+  .site-footer-pink .text-lg-end { text-align: center !important; }
+  .site-footer-pink .d-flex.justify-content-lg-end { justify-content: center !important; }
   
-  /* Уменьшаем высоту карточек товаров в каталоге и аксессуарах */
-  .card-img-custom {
-    height: 250px; /* Было 350px */
-  }
-
-  /* Уменьшаем фото под текстом на главной */
-  .glass-panel img[src="images/777.jpeg"] {
-    max-height: 250px !important;
-  }
-
-  /* Уменьшаем фото в разделе "О нас" (на главной) */
-  .glass-panel img[src="images/56.jpg"] {
-    max-height: 300px !important;
-  }
-
-  /* Уменьшаем заголовки на мобильных, чтобы они не занимали весь экран */
-  h1, .display-1 {
-    font-size: 2.5rem !important;
-  }
-  h2, .display-6 {
-    font-size: 1.8rem !important;
-  }
-  
-  /* Делаем отступы поменьше, чтобы контент не был прижат */
-  main {
-    padding: 15px !important;
-    border-radius: 20px !important;
-  }
-}
-
-/* ===== АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ ===== */
-@media (min-width: 768px) and (max-width: 991px) {
-  .card-img-custom {
-    height: 300px;
+  /* Фикс для карточек контактов, чтобы текст не сжимался */
+  .col-12.col-lg-6 {
+    width: 100% !important;
+    flex: 0 0 100% !important;
   }
 }

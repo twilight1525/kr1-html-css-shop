@@ -9,33 +9,56 @@
 </head>
 <body>
 
-  <!-- ССЫЛКА ДЛЯ ПРОПУСКА МЕНЮ (A11y) -->
   <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 
   <header class="glass-header py-3">
     <div class="container">
       <div class="row align-items-center">
+        
+        <!-- Логотип (слева) -->
         <div class="col-6 col-md-3">
           <a class="navbar-brand fw-bold text-white fs-4" href="index.html" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5); display: inline-flex; align-items: center; gap: 10px;">
             <img src="images/logo.png" alt="Логотип SweetDolls" style="height: 60px; width: 60px; object-fit: contain;">SweetDolls
           </a>
         </div>
+
+        <!-- Навигация и Меню -->
         <div class="col-6 col-md-9 text-end d-flex align-items-center justify-content-end gap-2">
-          <!-- НАВИГАЦИЯ С ARIA-LABEL -->
-          <nav aria-label="Основная навигация" class="d-flex align-items-center gap-2">
-            <a href="index.html" class="btn btn-glass active d-none d-lg-inline-flex" aria-current="page">Главная</a>
-            <a href="catalog.html" class="btn btn-glass d-none d-lg-inline-flex">Каталог</a>
-            <a href="accessories.html" class="btn btn-glass d-none d-lg-inline-flex">Аксессуары</a>
-            <a href="about.html" class="btn btn-glass d-none d-lg-inline-flex">О нас</a>
-            <a href="contacts.html" class="btn btn-glass d-none d-lg-inline-flex">Контакты</a>
-            <a href="#" class="btn btn-aero" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
+          
+          <!-- Меню для ПК (скрыто на телефоне) -->
+          <nav aria-label="Основная навигация" class="d-none d-md-flex align-items-center gap-2">
+            <a href="index.html" class="btn btn-glass active" aria-current="page">Главная</a>
+            <a href="catalog.html" class="btn btn-glass">Каталог</a>
+            <a href="accessories.html" class="btn btn-glass">Аксессуары</a>
+            <a href="about.html" class="btn btn-glass">О нас</a>
+            <a href="contacts.html" class="btn btn-glass">Контакты</a>
+            <!-- Корзина для ПК -->
+            <a href="#" class="btn btn-aero ms-2" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
           </nav>
+
+          <!-- Бургер для телефона (виден только на мобилке) -->
+          <button class="btn btn-glass d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Открыть меню">
+            ☰ Меню
+          </button>
         </div>
+      </div>
+
+      <!-- Выпадающее меню для мобильных -->
+      <div class="collapse d-md-none mt-3" id="mobileMenu">
+        <nav class="d-flex flex-column gap-2 p-3 rounded-4" style="background: rgba(255,255,255,0.95); box-shadow: 0 10px 30px rgba(233, 30, 99, 0.2);" aria-label="Мобильная навигация">
+          <a href="index.html" class="btn btn-glass w-100 active">Главная</a>
+          <a href="catalog.html" class="btn btn-glass w-100">Каталог</a>
+          <a href="accessories.html" class="btn btn-glass w-100">Аксессуары</a>
+          <a href="about.html" class="btn btn-glass w-100">О нас</a>
+          <a href="contacts.html" class="btn btn-glass w-100">Контакты</a>
+          
+          <!-- Корзина в выпадающем меню на телефоне -->
+          <a href="#" class="btn btn-aero w-100 mt-2" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
+        </nav>
       </div>
     </div>
   </header>
 
-  <!-- ДОБАВЛЕН ID="MAIN" -->
   <main id="main">
     <div class="container" style="position: relative;">
       <section class="row align-items-center g-5 py-4">
@@ -70,7 +93,7 @@
       <section class="py-5">
         <h2 class="text-center text-aero-dark mb-5 display-6">Популярные куклы</h2>
         <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-6 col-md-6 col-lg-4">
             <div class="glass-card h-100 p-4 d-flex flex-column">
               <img src="images/cupid.jpg" alt="Кукла Кьюпид с крыльями" class="card-img-custom">
               <h3 class="h4 text-aero-dark">Кьюпид</h3>
@@ -79,7 +102,7 @@
               <button class="btn btn-outline-aero mt-3 rounded-pill d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-6 col-md-6 col-lg-4">
             <div class="glass-card h-100 p-4 d-flex flex-column">
               <img src="images/poppy.jpg" alt="Кукла Поппи О'Хара" class="card-img-custom">
               <h3 class="h4 text-aero-dark">Поппи О'Хара</h3>
@@ -88,7 +111,7 @@
               <button class="btn btn-outline-aero mt-3 rounded-pill d-block mx-auto" data-bs-toggle="modal" data-bs-target="#cartModal">В корзину</button>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-6 col-md-6 col-lg-4">
             <div class="glass-card h-100 p-4 d-flex flex-column">
               <img src="images/reiven.jpeg" alt="Кукла Рейвен Квин" class="card-img-custom">
               <h3 class="h4 text-aero-dark">Рейвен Квин</h3>
@@ -122,8 +145,8 @@
       <section class="py-5">
         <div class="row g-4 align-items-stretch justify-content-center">
           <div class="col-xl-1 d-none d-xl-flex flex-column gap-3 justify-content-center">
-            <img src="images/99.jpeg" alt="Декор" class="img-fluid rounded-3 shadow-sm w-100" style="object-fit: cover; height: 110px;">
-            <img src="images/989.jpg" alt="Декор" class="img-fluid rounded-3 shadow-sm w-100" style="object-fit: cover; height: 110px;">
+            <img src="images/99.jpeg" alt="" class="img-fluid rounded-3 shadow-sm w-100" style="object-fit: cover; height: 110px;">
+            <img src="images/989.jpg" alt="" class="img-fluid rounded-3 shadow-sm w-100" style="object-fit: cover; height: 110px;">
           </div>
           <div class="col-12 col-xl-10">
             <div class="row g-4">
@@ -152,12 +175,12 @@
                         </div>
                       </div>
                     </div>
-                   <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Предыдущий отзыв">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Следующий отзыв">
-  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  </button>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Предыдущий отзыв">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Следующий отзыв">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -183,8 +206,8 @@
             </div>
           </div>
           <div class="col-xl-1 d-none d-xl-flex flex-column gap-3 justify-content-center">
-            <img src="images/56.jpg" alt="Декор" class="img-fluid rounded-3 shadow-sm w-100" style="object-fit: cover; height: 110px;">
-            <img src="images/4015.jpg" alt="Декор" class="img-fluid rounded-3 shadow-sm w-100" style="object-fit: cover; height: 110px;">
+            <img src="images/56.jpg" alt="" class="img-fluid rounded-3 shadow-sm w-100" style="object-fit: cover; height: 110px;">
+            <img src="images/4015.jpg" alt="" class="img-fluid rounded-3 shadow-sm w-100" style="object-fit: cover; height: 110px;">
           </div>
         </div>
       </section>
@@ -194,8 +217,8 @@
   <footer class="site-footer-pink pt-5 pb-3">
     <div class="container">
       <div class="row g-4 mb-4 align-items-center">
-        <div class="col-12 col-lg-4">
-          <a class="navbar-brand fw-bold d-flex align-items-center gap-2 mb-2 footer-logo" href="index.html">
+        <div class="col-12 col-lg-4 text-center text-lg-start">
+          <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 mb-2 footer-logo" href="index.html">
             <img src="images/logo.png" alt="Логотип SweetDolls" style="height: 50px; width: 50px; object-fit: contain;">SweetDolls
           </a>
           <p class="small opacity-75 mb-2">Куклы Ever After High. Аксессуары. Коллекции.</p>
@@ -210,13 +233,14 @@
             <li><a href="about.html">О нас</a></li>
           </ul>
         </div>
-        <div class="col-12 col-lg-4 text-lg-end">
-          <a href="contacts.html#contact-section" class="footer-contact-btn">Связаться с нами <span aria-hidden="true">💌</span></a>
-          <div class="d-flex justify-content-lg-end align-items-center gap-3 mt-3">
+        <div class="col-12 col-lg-4 text-center text-lg-end">
+          <div class="d-flex justify-content-center justify-content-lg-end mb-3">
+            <a href="contacts.html#contact-section" class="footer-contact-btn">Связаться с нами <span aria-hidden="true">💌</span></a>
+          </div>
+          <div class="d-flex justify-content-center justify-content-lg-end align-items-center gap-3">
             <a href="#" class="footer-social-icon" aria-label="Наш ВКонтакте"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.785 18C6.935 18 3.708 14.163 3.543 3.67H6.505C6.595 10.144 9.554 12.856 12.058 13.503V3.67H15.01V9.64C17.438 9.372 19.988 6.787 20.864 3.67H23.787C22.768 7.574 20.205 10.159 18.261 11.338C20.205 12.352 23.104 15.078 24 18H20.785C20.031 15.384 18.086 13.191 15.01 12.856V18H12.785Z" fill="#fff"/></svg></a>
             <a href="#" class="footer-social-icon" aria-label="Наш Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.6914 3.20068L2.92578 10.5137C1.91992 10.9254 1.93555 11.4935 2.75391 11.7497L7.53125 13.2598L18.6289 6.26367C19.1504 5.94141 19.627 6.11328 19.2344 6.46875L10.207 14.6265H10.2031L10.207 14.6305L9.875 19.3691C10.3535 19.3691 10.5547 19.1562 10.8242 18.8965L12.9844 16.8418L17.7734 20.3711C18.668 20.8672 19.3047 20.6055 19.5273 19.5293L22.4141 4.15039C22.7227 2.9082 21.9492 2.3418 21.6914 3.20068Z" fill="#fff"/></svg></a>
             <a href="#" class="footer-social-icon" aria-label="Наш Max"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 18V6H7L12 12L17 6H20V18H17V10L12 16L7 10V18H4Z" fill="#fff"/></svg></a>
-            <!-- ИСПРАВЛЕНО: ЗАКРЫТ ТЕГ BUTTON И ДОБАВЛЕНА ИКОНКА -->
             <button class="footer-chat-btn" onclick="toggleChat()" aria-label="Открыть чат с менеджером" style="border: none;">💬</button>
           </div>
         </div>
@@ -224,7 +248,6 @@
     </div>
   </footer>
 
-  <!-- МОДАЛЬНОЕ ОКНО (ДОБАВЛЕН ID ДЛЯ ЗАГОЛОВКА) -->
   <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content glass-panel shadow-lg border-0">
@@ -245,7 +268,6 @@
     </div>
   </div>
 
-  <!-- ВИДЖЕТ ЧАТА (ДОБАВЛЕНЫ LABEL И ARIA-LABEL) -->
   <div class="manager-chat-wrapper" style="bottom: 20px; left: 20px; z-index: 2000;">
     <div class="manager-chat-box" id="chatBox">
       <div class="chat-header">
@@ -265,21 +287,17 @@
     <button class="manager-chat-btn" onclick="toggleChat()" aria-label="Открыть чат">💬<span class="chat-badge">1</span></button>
   </div>
 
-  <!-- КНОПКА НАВЕРХ -->
-  <div class="scroll-to-top" id="scrollToTopBtn">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <div class="scroll-to-top" id="scrollToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <svg style="cursor: pointer;" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Чат
     function toggleChat() {
       document.getElementById('chatBox').classList.toggle('show');
     }
-    
-    // Кнопка наверх
     window.addEventListener('scroll', function() {
       const btn = document.getElementById('scrollToTopBtn');
       if (window.scrollY > 300) {
@@ -287,11 +305,6 @@
       } else {
         btn.classList.remove('show');
       }
-    });
-
-    // Обработчик клика (вешаем прямо на кнопку)
-    document.getElementById('scrollToTopBtn').addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
