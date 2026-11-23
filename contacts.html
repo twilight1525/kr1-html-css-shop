@@ -66,7 +66,7 @@
               <p class="text-aero-muted mb-1">Адрес: Москва, ул. Варварка, д. 8</p>
               
               <div class="p-3 mb-2 rounded-3" style="background: rgba(255,255,255,0.5); border-left: 4px solid #f06292;">
-                <p class="text-aero-dark fw-bold mb-1">
+                <p class="text-aero-dark fw-bold mb-1 contact-line">
                   <span class="me-2" aria-hidden="true">📞</span> +7 (999) 111-22-33
                 </p>
                 <p class="text-aero-muted small mb-1">
@@ -85,9 +85,9 @@
               <p class="text-aero-muted mb-1">Адрес: Москва, ул. Большая Дорогомиловская, д. 4</p>
               
               <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.5); border-left: 4px solid #f06292;">
-                <p class="text-aero-dark fw-bold mb-1">
-                  <span class="me-2" aria-hidden="true">📞</span> +7 (999) 444-55-66
-                </p>
+<p class="text-aero-dark fw-bold mb-1">
+  <span class="contact-line"><span class="me-2" aria-hidden="true">📞</span> +7 (999) 444-55-66</span>
+</p>
                 <p class="text-aero-muted small mb-1">
                   <span class="me-2" aria-hidden="true">✉️</span> kiev@sweetdolls.ru
                 </p>
@@ -174,7 +174,6 @@
             <img src="images/logo.png" alt="Логотип SweetDolls" style="height: 50px; width: 50px; object-fit: contain;">SweetDolls
           </a>
           <p class="small opacity-75 mb-2">Куклы Ever After High. Аксессуары. Коллекции.</p>
-          <p class="small opacity-50 mb-0">&copy; 2024 - 2026 Все права защищены.</p>
         </div>
         <div class="col-12 col-lg-4 text-center">
           <h5 class="fw-bold mb-2 fs-6">Магазин</h5>
@@ -193,6 +192,13 @@
             <a href="#" class="footer-social-icon" aria-label="Наш Max"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 18V6H7L12 12L17 6H20V18H17V10L12 16L7 10V18H4Z" fill="#fff"/></svg></a>
             <button class="footer-chat-btn" onclick="toggleChat()" aria-label="Открыть чат с менеджером" style="border: none;">💬</button>
           </div>
+        </div>
+      </div>
+
+      <!-- Копирайт в самом низу футера -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="small opacity-50 mb-0">&copy; 2024 - 2026 Все права защищены.</p>
         </div>
       </div>
     </div>
@@ -237,7 +243,6 @@
     <button class="manager-chat-btn" onclick="toggleChat()" aria-label="Открыть чат">💬<span class="chat-badge">1</span></button>
   </div>
 
-  <!-- КНОПКА НАВЕРХ -->
   <div class="scroll-to-top" id="scrollToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
     <svg style="cursor: pointer;" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="button" aria-label="Прокрутить наверх">
       <polyline points="18 15 12 9 6 15"></polyline>
@@ -258,6 +263,5 @@
       }
     });
   </script>
-  <!-- ИСПРАВЛЕНО: Удалено подключение несуществующего js/main.js -->
 </body>
 </html>

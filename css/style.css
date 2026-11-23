@@ -221,9 +221,8 @@ main {
   color: #d81b60 !important;
   text-decoration: none !important;
   background: transparent !important;
-  border: 2px solid #d81b60 !important; /* Розовая рамка */
+  border: 2px solid #d81b60 !important;
   border-radius: 50px !important;
-  /* Белая тень (свечение) */
   box-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 25px rgba(255, 255, 255, 0.6) !important; 
   transition: all 0.3s ease !important;
 }
@@ -274,7 +273,7 @@ main {
 .manager-chat-wrapper {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 30px; /* Перенесли влево */
   z-index: 2000;
   font-family: Arial, sans-serif;
 }
@@ -292,8 +291,6 @@ main {
   box-shadow: 0 4px 15px rgba(216, 27, 96, 0.4);
   transition: transform 0.3s ease;
   position: relative;
-  
-
   border: none !important;
   outline: none !important;
   padding: 0;
@@ -322,7 +319,7 @@ main {
 .manager-chat-box {
   position: absolute;
   bottom: 80px;
-  right: 0;
+  left: 0; /* Окно открывается вправо от кнопки */
   width: 320px;
   background: #fff;
   border-radius: 20px;
@@ -330,7 +327,7 @@ main {
   overflow: hidden;
   display: none;
   border: 1px solid #fce4ec;
-  transform-origin: bottom right;
+  transform-origin: bottom left;
   animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -412,30 +409,6 @@ main {
   justify-content: center;
   font-size: 16px;
 }
-/* ===== ВИДЖЕТ ЧАТА (СЛЕВА) ===== */
-.manager-chat-wrapper {
-  position: fixed;
-  bottom: 30px;
-  left: 30px; /* Перенесли влево */
-  z-index: 2000;
-  font-family: Arial, sans-serif;
-}
-
-.manager-chat-box {
-  position: absolute;
-  bottom: 80px;
-  left: 0; /* Окно открывается вправо от кнопки */
-  width: 320px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  overflow: hidden;
-  display: none;
-  border: 1px solid #fce4ec;
-  transform-origin: bottom left;
-  animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
 
 .scroll-to-top {
   position: fixed;
@@ -449,7 +422,7 @@ main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 9999; /* ОЧЕНЬ ВАЖНО: Высокий z-index, чтобы быть поверх всего */
+  z-index: 9999;
   transition: all 0.3s ease;
   opacity: 0;
   pointer-events: none;
@@ -465,23 +438,20 @@ main {
   transform: translateY(-5px) scale(1.1);
 }
 
-/* Клик проходит сквозь SVG прямо на кнопку */
 .scroll-to-top svg {
   pointer-events: none; 
 }
-/* ===== ДОСТУПНОСТЬ (A11Y) ===== */
 
-/* 1. Видимый фокус при навигации с клавиатуры (Tab) */
+/* ===== ДОСТУПНОСТЬ (A11Y) ===== */
 *:focus-visible {
-  outline: 3px solid #d81b60 !important; /* Ярко-розовая обводка */
+  outline: 3px solid #d81b60 !important;
   outline-offset: 3px !important;
 }
 
-/* 2. Кнопка "Перейти к основному содержимому" (Skip-link) */
 .skip-link {
   position: absolute;
   left: 16px;
-  top: -100px; /* Скрыта за верхним краем экрана */
+  top: -100px;
   z-index: 9999;
   padding: 10px 15px;
   background-color: #d81b60;
@@ -492,29 +462,56 @@ main {
   transition: top 0.3s ease;
 }
 
-/* Показываем ссылку, когда на неё попадает фокус с клавиатуры */
 .skip-link:focus,
 .skip-link:focus-visible {
   top: 16px;
   color: #ffffff !important;
 }
 
-/* Убираем стандартный outline у кнопок, если он перекрывает наш красивый */
 .btn:focus, .btn:active {
   box-shadow: none !important;
 }
 .btn:focus-visible {
   box-shadow: 0 0 0 0.25rem rgba(216, 27, 96, 0.5) !important;
 }
+
+/* ===== ИСПРАВЛЕНИЕ ДЛЯ ТЕЛЕФОНОВ В КОНТАКТАХ ===== */
+.contact-line {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap; /* Запрещаем перенос номера */
+  gap: 4px;
+}
+
+/* На мобильных делаем шрифт чуть меньше, чтобы номер влез */
+@media (max-width: 575.98px) {
+  .contact-line {
+    font-size: 0.9rem;
+  }
+}
+
+/* На очень узких экранах (как 400px) уменьшаем еще сильнее и убираем отступ */
+@media (max-width: 420px) {
+  .contact-line {
+    font-size: 0.85rem;
+  }
+  .contact-line .me-2 {
+    margin-right: 0 !important;
+  }
+}
+
 /* ===== АДАПТИВНОСТЬ (ТЕЛЕФОНЫ) ===== */
 @media (max-width: 767px) {
   /* Карточки в 2 столбика */
+  .row > .col-6.col-md-6.col-lg-3,
   .row > .col-6.col-md-6.col-lg-4 {
     width: 50% !important;
     flex: 0 0 50% !important;
     padding-left: 8px !important;
     padding-right: 8px !important;
   }
+
+
   .card-img-custom { height: 180px !important; object-fit: contain; }
   .glass-card h3, .glass-card h2 { font-size: 16px !important; }
   .glass-card .text-aero-muted { font-size: 12px !important; }
