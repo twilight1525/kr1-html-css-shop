@@ -278,7 +278,6 @@ main {
   z-index: 2000;
   font-family: Arial, sans-serif;
 }
-
 .manager-chat-btn {
   width: 60px;
   height: 60px;
@@ -293,6 +292,11 @@ main {
   box-shadow: 0 4px 15px rgba(216, 27, 96, 0.4);
   transition: transform 0.3s ease;
   position: relative;
+  
+
+  border: none !important;
+  outline: none !important;
+  padding: 0;
 }
 .manager-chat-btn:hover {
   transform: scale(1.1);
@@ -445,11 +449,11 @@ main {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 9999; /* ОЧЕНЬ ВАЖНО: Высокий z-index, чтобы быть поверх всего */
   transition: all 0.3s ease;
   opacity: 0;
   pointer-events: none;
-  filter: drop-shadow(0 0 8px rgba(240, 98, 146, 0.8)) drop-shadow(0 0 15px rgba(240, 98, 146, 0.4));
+  filter: drop-shadow(0 0 8px rgba(240, 98, 146, 0.8));
 }
 
 .scroll-to-top.show {
@@ -461,7 +465,83 @@ main {
   transform: translateY(-5px) scale(1.1);
 }
 
-
+/* Клик проходит сквозь SVG прямо на кнопку */
 .scroll-to-top svg {
   pointer-events: none; 
+}
+/* ===== ДОСТУПНОСТЬ (A11Y) ===== */
+
+/* 1. Видимый фокус при навигации с клавиатуры (Tab) */
+*:focus-visible {
+  outline: 3px solid #d81b60 !important; /* Ярко-розовая обводка */
+  outline-offset: 3px !important;
+}
+
+/* 2. Кнопка "Перейти к основному содержимому" (Skip-link) */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px; /* Скрыта за верхним краем экрана */
+  z-index: 9999;
+  padding: 10px 15px;
+  background-color: #d81b60;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: top 0.3s ease;
+}
+
+/* Показываем ссылку, когда на неё попадает фокус с клавиатуры */
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+  color: #ffffff !important;
+}
+
+/* Убираем стандартный outline у кнопок, если он перекрывает наш красивый */
+.btn:focus, .btn:active {
+  box-shadow: none !important;
+}
+.btn:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(216, 27, 96, 0.5) !important;
+}
+/* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ (Телефоны) ===== */
+@media (max-width: 767px) {
+  
+  /* Уменьшаем высоту карточек товаров в каталоге и аксессуарах */
+  .card-img-custom {
+    height: 250px; /* Было 350px */
+  }
+
+  /* Уменьшаем фото под текстом на главной */
+  .glass-panel img[src="images/777.jpeg"] {
+    max-height: 250px !important;
+  }
+
+  /* Уменьшаем фото в разделе "О нас" (на главной) */
+  .glass-panel img[src="images/56.jpg"] {
+    max-height: 300px !important;
+  }
+
+  /* Уменьшаем заголовки на мобильных, чтобы они не занимали весь экран */
+  h1, .display-1 {
+    font-size: 2.5rem !important;
+  }
+  h2, .display-6 {
+    font-size: 1.8rem !important;
+  }
+  
+  /* Делаем отступы поменьше, чтобы контент не был прижат */
+  main {
+    padding: 15px !important;
+    border-radius: 20px !important;
+  }
+}
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ ПЛАНШЕТОВ ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-img-custom {
+    height: 300px;
+  }
 }

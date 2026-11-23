@@ -9,27 +9,31 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
   <header class="glass-header py-3">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-6 col-md-3">
           <a class="navbar-brand fw-bold text-white fs-4" href="index.html" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5); display: inline-flex; align-items: center; gap: 10px;">
-            <img src="images/logo.png" alt="Логотип" style="height: 60px; width: 60px; object-fit: contain;">SweetDolls
+            <img src="images/logo.png" alt="Логотип SweetDolls" style="height: 60px; width: 60px; object-fit: contain;">SweetDolls
           </a>
         </div>
         <div class="col-6 col-md-9 text-end d-flex align-items-center justify-content-end gap-2">
-          <a href="index.html" class="btn btn-glass d-none d-lg-inline-flex">Главная</a>
-          <a href="catalog.html" class="btn btn-glass d-none d-lg-inline-flex">Каталог</a>
-          <a href="accessories.html" class="btn btn-glass d-none d-lg-inline-flex">Аксессуары</a>
-          <a href="about.html" class="btn btn-glass d-none d-lg-inline-flex">О нас</a>
-          <a href="contacts.html" class="btn btn-glass active d-none d-lg-inline-flex">Контакты</a>
-          <a href="#" class="btn btn-aero" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
+          <nav aria-label="Основная навигация" class="d-flex align-items-center gap-2">
+            <a href="index.html" class="btn btn-glass d-none d-lg-inline-flex">Главная</a>
+            <a href="catalog.html" class="btn btn-glass d-none d-lg-inline-flex">Каталог</a>
+            <a href="accessories.html" class="btn btn-glass d-none d-lg-inline-flex">Аксессуары</a>
+            <a href="about.html" class="btn btn-glass d-none d-lg-inline-flex">О нас</a>
+            <a href="contacts.html" class="btn btn-glass active d-none d-lg-inline-flex" aria-current="page">Контакты</a>
+            <a href="#" class="btn btn-aero" data-bs-toggle="modal" data-bs-target="#cartModal">Корзина</a>
+          </nav>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <div class="container py-5">
       <h1 class="h2 text-aero-dark mb-4 text-center">Контакты и Доставка</h1>
       
@@ -37,60 +41,60 @@
         <!-- Левая колонка: Контакты и форма -->
         <div class="col-12 col-lg-6" id="contact-section">
           <div class="glass-panel p-5 h-100">
-            <h3 class="h4 text-aero-dark mb-4">Наши магазины</h3>
+            <h2 class="h4 text-aero-dark mb-4">Наши магазины</h2>
             
             <!-- Магазин 1 -->
             <div class="mb-4">
-              <h5 class="text-aero-dark fw-bold mb-2">
-                <span class="me-2">📍</span> м. Китай-город
-              </h5>
+              <h3 class="text-aero-dark fw-bold mb-2 h5">
+                <span class="me-2" aria-hidden="true">📍</span> м. Китай-город
+              </h3>
               <p class="text-aero-muted mb-1">Адрес: Москва, ул. Варварка, д. 8</p>
               
-              <!-- Связаться с магазином 1 -->
               <div class="p-3 mb-2 rounded-3" style="background: rgba(255,255,255,0.5); border-left: 4px solid #f06292;">
                 <p class="text-aero-dark fw-bold mb-1">
-                  <span class="me-2">📞</span> +7 (999) 111-22-33
+                  <span class="me-2" aria-hidden="true">📞</span> +7 (999) 111-22-33
                 </p>
                 <p class="text-aero-muted small mb-1">
-                  <span class="me-2">✉️</span> kitay@sweetdolls.ru
+                  <span class="me-2" aria-hidden="true">✉️</span> kitay@sweetdolls.ru
                 </p>
                 <p class="text-aero-muted small mb-0">
-                  <span class="me-2">🕒</span> Ежедневно с 10:00 до 21:00
+                  <span class="me-2" aria-hidden="true">🕒</span> Ежедневно с 10:00 до 21:00
                 </p>
               </div>
             </div>
             
             <!-- Магазин 2 -->
             <div class="mb-4">
-              <h5 class="text-aero-dark fw-bold mb-2">
-                <span class="me-2">📍</span> м. Киевская
-              </h5>
+              <h3 class="text-aero-dark fw-bold mb-2 h5">
+                <span class="me-2" aria-hidden="true">📍</span> м. Киевская
+              </h3>
               <p class="text-aero-muted mb-1">Адрес: Москва, ул. Большая Дорогомиловская, д. 4</p>
               
-              <!-- Связаться с магазином 2 -->
               <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.5); border-left: 4px solid #f06292;">
                 <p class="text-aero-dark fw-bold mb-1">
-                  <span class="me-2">📞</span> +7 (999) 444-55-66
+                  <span class="me-2" aria-hidden="true">📞</span> +7 (999) 444-55-66
                 </p>
                 <p class="text-aero-muted small mb-1">
-                  <span class="me-2">✉️</span> kiev@sweetdolls.ru
+                  <span class="me-2" aria-hidden="true">✉️</span> kiev@sweetdolls.ru
                 </p>
                 <p class="text-aero-muted small mb-0">
-                  <span class="me-2">🕒</span> Ежедневно с 10:00 до 21:00
+                  <span class="me-2" aria-hidden="true">🕒</span> Ежедневно с 10:00 до 21:00
                 </p>
               </div>
             </div>
 
             <hr class="border-info opacity-25 my-4">
             
-            <h3 class="h4 text-aero-dark mb-3">Обратная связь</h3>
+            <h2 class="h4 text-aero-dark mb-3">Обратная связь</h2>
             <form>
               <div class="row g-3">
                 <div class="col-12 col-md-6">
-                  <input type="text" class="form-control" placeholder="Ваше имя" required>
+                  <label for="contact-name" class="visually-hidden">Ваше имя</label>
+                  <input id="contact-name" type="text" class="form-control" placeholder="Ваше имя" required>
                 </div>
                 <div class="col-12 col-md-6">
-                  <input type="tel" class="form-control" placeholder="+7 (965) 243-87-33" required>
+                  <label for="contact-phone" class="visually-hidden">Ваш телефон</label>
+                  <input id="contact-phone" type="tel" class="form-control" placeholder="+7 (965) 243-87-33" required>
                 </div>
                 <div class="col-12">
                   <button class="btn btn-aero w-100 rounded-pill" type="submit">Жду звонка</button>
@@ -103,32 +107,32 @@
         <!-- Правая колонка: Доставка -->
         <div class="col-12 col-lg-6">
           <div class="glass-panel p-5 h-100">
-            <h3 class="h4 text-aero-dark mb-4">Условия доставки</h3>
+            <h2 class="h4 text-aero-dark mb-4">Условия доставки</h2>
             <div class="d-flex mb-4">
-              <span class="bubble-icon mt-1 me-3"></span>
+              <span class="bubble-icon mt-1 me-3" aria-hidden="true"></span>
               <div>
-                <h5 class="text-aero-dark fw-bold mb-1">По Москве</h5>
+                <h3 class="text-aero-dark fw-bold mb-1 h6">По Москве</h3>
                 <p class="text-aero-muted small mb-0">Курьером — от 1 дня, 350 ₽. Бесплатно при заказе от 5 000 ₽.</p>
               </div>
             </div>
             <div class="d-flex mb-4">
-              <span class="bubble-icon mt-1 me-3"></span>
+              <span class="bubble-icon mt-1 me-3" aria-hidden="true"></span>
               <div>
-                <h5 class="text-aero-dark fw-bold mb-1">По России</h5>
+                <h3 class="text-aero-dark fw-bold mb-1 h6">По России</h3>
                 <p class="text-aero-muted small mb-0">Почтой / СДЭК — от 3 до 7 дней, от 400 ₽.</p>
               </div>
             </div>
             <div class="d-flex mb-4">
-              <span class="bubble-icon mt-1 me-3"></span>
+              <span class="bubble-icon mt-1 me-3" aria-hidden="true"></span>
               <div>
-                <h5 class="text-aero-dark fw-bold mb-1">Самовывоз</h5>
+                <h3 class="text-aero-dark fw-bold mb-1 h6">Самовывоз</h3>
                 <p class="text-aero-muted small mb-0">Бесплатно из любого нашего магазина.</p>
               </div>
             </div>
             <div class="d-flex mb-4">
-              <span class="bubble-icon mt-1 me-3"></span>
+              <span class="bubble-icon mt-1 me-3" aria-hidden="true"></span>
               <div>
-                <h5 class="text-aero-dark fw-bold mb-1">Подарочная упаковка</h5>
+                <h3 class="text-aero-dark fw-bold mb-1 h6">Подарочная упаковка</h3>
                 <p class="text-aero-muted small mb-0">Бесплатно по запросу.</p>
               </div>
             </div>
@@ -141,27 +145,23 @@
         <h2 class="text-center text-aero-dark mb-4 display-6">Как нас найти</h2>
         <div class="glass-panel p-2 p-md-3">
           <div class="ratio ratio-21x9 rounded-4 overflow-hidden shadow">
-            <!-- ТВОЯ НОВАЯ КАРТА -->
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1652e6b81b20c9eba66d8faa97d71e56ac8aeb883361521279a5a82c8e00121e&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
           </div>
         </div>
       </section>
     </div>
-    
   </main>
-
 
   <footer class="site-footer-pink pt-5 pb-3">
     <div class="container">
       <div class="row g-4 mb-4 align-items-center">
         <div class="col-12 col-lg-4">
           <a class="navbar-brand fw-bold d-flex align-items-center gap-2 mb-2 footer-logo" href="index.html">
-            <img src="images/logo.png" alt="Логотип" style="height: 50px; width: 50px; object-fit: contain;">SweetDolls
+            <img src="images/logo.png" alt="Логотип SweetDolls" style="height: 50px; width: 50px; object-fit: contain;">SweetDolls
           </a>
           <p class="small opacity-75 mb-2">Куклы Ever After High. Аксессуары. Коллекции.</p>
           <p class="small opacity-50 mb-0">&copy; 2024 - 2026 Все права защищены.</p>
         </div>
-        
         <div class="col-12 col-lg-4 text-center">
           <h5 class="fw-bold mb-2 fs-6">Магазин</h5>
           <ul class="list-unstyled footer-links d-flex justify-content-center flex-wrap gap-3 mb-0">
@@ -171,32 +171,31 @@
             <li><a href="about.html">О нас</a></li>
           </ul>
         </div>
-        
         <div class="col-12 col-lg-4 text-lg-end">
-          <a href="contacts.html#contact-section" class="footer-contact-btn">Связаться с нами <span>💌</span></a>
+          <a href="contacts.html#contact-section" class="footer-contact-btn">Связаться с нами <span aria-hidden="true">💌</span></a>
           <div class="d-flex justify-content-lg-end align-items-center gap-3 mt-3">
-            <a href="#" class="footer-social-icon" aria-label="VK"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.785 18C6.935 18 3.708 14.163 3.543 3.67H6.505C6.595 10.144 9.554 12.856 12.058 13.503V3.67H15.01V9.64C17.438 9.372 19.988 6.787 20.864 3.67H23.787C22.768 7.574 20.205 10.159 18.261 11.338C20.205 12.352 23.104 15.078 24 18H20.785C20.031 15.384 18.086 13.191 15.01 12.856V18H12.785Z" fill="#fff"/></svg></a>
-            <a href="#" class="footer-social-icon" aria-label="Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.6914 3.20068L2.92578 10.5137C1.91992 10.9254 1.93555 11.4935 2.75391 11.7497L7.53125 13.2598L18.6289 6.26367C19.1504 5.94141 19.627 6.11328 19.2344 6.46875L10.207 14.6265H10.2031L10.207 14.6305L9.875 19.3691C10.3535 19.3691 10.5547 19.1562 10.8242 18.8965L12.9844 16.8418L17.7734 20.3711C18.668 20.8672 19.3047 20.6055 19.5273 19.5293L22.4141 4.15039C22.7227 2.9082 21.9492 2.3418 21.6914 3.20068Z" fill="#fff"/></svg></a>
-            <a href="#" class="footer-social-icon" aria-label="Max"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 18V6H7L12 12L17 6H20V18H17V10L12 16L7 10V18H4Z" fill="#fff"/></svg></a>
-            <div class="footer-chat-btn" onclick="toggleChat()">💬</div>
+            <a href="#" class="footer-social-icon" aria-label="Наш ВКонтакте"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.785 18C6.935 18 3.708 14.163 3.543 3.67H6.505C6.595 10.144 9.554 12.856 12.058 13.503V3.67H15.01V9.64C17.438 9.372 19.988 6.787 20.864 3.67H23.787C22.768 7.574 20.205 10.159 18.261 11.338C20.205 12.352 23.104 15.078 24 18H20.785C20.031 15.384 18.086 13.191 15.01 12.856V18H12.785Z" fill="#fff"/></svg></a>
+            <a href="#" class="footer-social-icon" aria-label="Наш Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21.6914 3.20068L2.92578 10.5137C1.91992 10.9254 1.93555 11.4935 2.75391 11.7497L7.53125 13.2598L18.6289 6.26367C19.1504 5.94141 19.627 6.11328 19.2344 6.46875L10.207 14.6265H10.2031L10.207 14.6305L9.875 19.3691C10.3535 19.3691 10.5547 19.1562 10.8242 18.8965L12.9844 16.8418L17.7734 20.3711C18.668 20.8672 19.3047 20.6055 19.5273 19.5293L22.4141 4.15039C22.7227 2.9082 21.9492 2.3418 21.6914 3.20068Z" fill="#fff"/></svg></a>
+            <a href="#" class="footer-social-icon" aria-label="Наш Max"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 18V6H7L12 12L17 6H20V18H17V10L12 16L7 10V18H4Z" fill="#fff"/></svg></a>
+            <button class="footer-chat-btn" onclick="toggleChat()" aria-label="Открыть чат с менеджером" style="border: none;">💬</button>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content glass-panel shadow-lg border-0">
         <div class="modal-header border-0 pb-0">
-          <h2 class="modal-title h4 text-aero-dark w-100 text-center mt-3">Оформление заказа</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          <h2 class="modal-title h4 text-aero-dark w-100 text-center mt-3" id="cartModalLabel">Оформление заказа</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть окно"></button>
         </div>
         <div class="modal-body p-4 p-md-5">
           <form>
             <div class="row g-3">
-              <div class="col-12"><label for="name" class="form-label text-aero-dark">Ваше имя *</label><input id="name" type="text" class="form-control" placeholder="Анна" required></div>
-              <div class="col-12"><label for="phone" class="form-label text-aero-dark">Телефон *</label><input id="phone" type="tel" class="form-control" placeholder="+7 900 000-00-00" required></div>
+              <div class="col-12"><label for="name" class="form-label text-aero-dark">Ваше имя *</label><input id="name" type="text" class="form-control" placeholder="Анна" required aria-required="true"></div>
+              <div class="col-12"><label for="phone" class="form-label text-aero-dark">Телефон *</label><input id="phone" type="tel" class="form-control" placeholder="+7 900 000-00-00" required aria-required="true"></div>
               <div class="col-12 mt-4 text-center"><button class="btn btn-aero btn-lg w-100 rounded-pill" type="submit">Оформить заказ</button></div>
             </div>
           </form>
@@ -205,37 +204,39 @@
     </div>
   </div>
 
-  <div class="manager-chat-wrapper" style="bottom: 20px; right: 20px; z-index: 2000;">
+  <div class="manager-chat-wrapper" style="bottom: 20px; left: 20px; z-index: 2000;">
     <div class="manager-chat-box" id="chatBox">
       <div class="chat-header">
         <div class="d-flex align-items-center gap-2">
           <div class="manager-avatar"></div>
           <div><h6 class="mb-0 fw-bold text-white">Анна</h6><small class="text-white opacity-75" style="font-size: 10px;">Менеджер онлайн</small></div>
         </div>
-        <button class="btn-close btn-close-white" onclick="toggleChat()"></button>
+        <button class="btn-close btn-close-white" onclick="toggleChat()" aria-label="Закрыть чат"></button>
       </div>
       <div class="chat-body"><div class="chat-message manager">Привет! 👋 Помочь выбрать куклу или аксессуар?</div></div>
       <div class="chat-footer">
-        <input type="text" class="form-control chat-input" placeholder="Напишите сообщение...">
-        <button class="btn btn-aero chat-send-btn">➤</button>
+        <label for="chat-input" class="visually-hidden">Сообщение</label>
+        <input id="chat-input" type="text" class="form-control chat-input" placeholder="Напишите сообщение...">
+        <button class="btn btn-aero chat-send-btn" aria-label="Отправить сообщение">➤</button>
       </div>
     </div>
-    <div class="manager-chat-btn" onclick="toggleChat()">💬<span class="chat-badge">1</span></div>
+    <button class="manager-chat-btn" onclick="toggleChat()" aria-label="Открыть чат">💬<span class="chat-badge">1</span></button>
   </div>
 
-  <div class="scroll-to-top" id="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <!-- КНОПКА НАВЕРХ -->
+  <div class="scroll-to-top" id="scrollToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <svg style="cursor: pointer;" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d81b60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="button" aria-label="Прокрутить наверх">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+  <script>
     function toggleChat() {
       document.getElementById('chatBox').classList.toggle('show');
     }
     window.addEventListener('scroll', function() {
-      const btn = document.getElementById('scroll-top');
+      const btn = document.getElementById('scrollToTopBtn');
       if (window.scrollY > 300) {
         btn.classList.add('show');
       } else {
@@ -243,6 +244,6 @@
       }
     });
   </script>
-  <script src="js/main.js"></script>
+  <!-- ИСПРАВЛЕНО: Удалено подключение несуществующего js/main.js -->
 </body>
 </html>
